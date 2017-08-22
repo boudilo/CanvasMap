@@ -52,7 +52,7 @@
 	    context = canvas.getContext("2d");
 
 	var img = new Image();
-	img.src = tiles;
+	img.src = tiles.tl();
 	img.onload = function () {
 
 	    context.drawImage(img, 0, 0);
@@ -64,7 +64,9 @@
 
 	'use strict';
 
-	module.exports = "js/42.png";
+	module.exports.tl = function tilesList(coordsList) {
+	    return "js/42.png";
+	}
 
 /***/ })
 /******/ ]);
